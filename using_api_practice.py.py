@@ -9,18 +9,63 @@
         <item>
           <galContentId>2859292</galContentId>
           <galContentTypeId>17</galContentTypeId>
-          <galTitle>1100╟МаЖ╫юаЖ</galTitle>
+          <galTitle>1100О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫</galTitle>
           <galWebImageUrl>http://tong.visitkorea.or.kr/cms2/website/92/2859292.jpg</galWebImageUrl>
           <galCreatedtime>20220926105242</galCreatedtime>
           <galModifiedtime>20220926105253</galModifiedtime>
           <galPhotographyMonth>202207</galPhotographyMonth>
-          <galPhotographyLocation>а╕ажф╞╨╟юзд║╣╣ ╪╜╠мфВ╫ц</galPhotographyLocation>
-          <galPhotographer>гя╠╧╟Э╠╓╟Ь╩Г юл╧Э╪Ж</galPhotographer>
-          <galSearchKeyword>1100╟МаЖ╫юаЖ, а╕ажф╞╨╟юзд║╣╣ ╪╜╠мфВ╫ц, а╕аж╣╣ ©ю╦╖, а╕аж©ю╦╖, 1100╟МаЖ е╫╧Ф╥н</galSearchKeyword>
+          <galPhotographyLocation>О©╫О©╫О©╫О©╫ф╞О©╫О©╫О©╫О©╫д║О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫</galPhotographyLocation>
+          <galPhotographer>О©╫я╠О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫л╧О©╫О©╫О©╫</galPhotographer>
+          <galSearchKeyword>1100О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫, О©╫О©╫О©╫О©╫ф╞О©╫О©╫О©╫О©╫д║О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫, О©╫О©╫О©╫ж╣О©╫ О©╫О©╫О©╫О©╫, О©╫О©╫О©╫ж©О©╫О©╫О©╫, 1100О©╫О©╫О©╫О©╫ е╫О©╫О©╫О©╫</galSearchKeyword>
         </item>
       </items>
       <numOfRows>1</numOfRows>
       <pageNo>1</pageNo>
       <totalCount>5251</totalCount>
+    </body>
+  </response>
+
+// М┌╓Л⌡▄К⌠° Й╡─Л┐┴ 
+curl -X 'GET' \
+  'https://apis.data.go.kr/B551011/KorService1/searchKeyword1?numOfRows=1&pageNo=1&MobileOS=WIN&MobileApp=Tour&keyword=%EA%B0%95%EC%9B%90&contentTypeId=12&serviceKey=3Nb0%2F4jy%2FaClfnlxLxtzqVHBrvqyF6AJ6DUemOzRK%2BXG2zjBWs35%2BY2p290TbSABSuFU43hTShYnqHMtPakdGA%3D%3D' \
+  -H 'accept: application/json'
+
+https://apis.data.go.kr/B551011/KorService1/searchKeyword1?numOfRows=1&pageNo=1&MobileOS=WIN&MobileApp=Tour%20&keyword=%EA%B0%95%EC%9B%90&serviceKey=3Nb0%2F4jy%2FaClfnlxLxtzqVHBrvqyF6AJ6DUemOzRK%2BXG2zjBWs35%2BY2p290TbSABSuFU43hTShYnqHMtPakdGA%3D%3D
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <response>
+    <header>
+      <resultCode>0000</resultCode>
+      <resultMsg>OK</resultMsg>
+    </header>
+    <body>
+      <items>
+        <item>
+          <addr1>Й╟∙Л⌡░К▐└ Л╤≤Л╡°Л▀° Л└°К╘╢ К╟∙Л┌╛К║° 1210</addr1>
+          <addr2>(Л└°К╘╢) К╤─Й╥╪</addr2>
+          <areacode>32</areacode>
+          <booktour>0</booktour>
+          <cat1>A02</cat1>
+          <cat2>A0205</cat2>
+          <cat3>A02050200</cat3>
+          <contentid>128778</contentid>
+          <contenttypeid>12</contenttypeid>
+          <createdtime>20060209090000</createdtime>
+          <firstimage>http://tong.visitkorea.or.kr/cms/resource/71/181971_image2_1.jpg</firstimage>
+          <firstimage2>http://tong.visitkorea.or.kr/cms/resource/71/181971_image3_1.jpg</firstimage2>
+          <cpyrhtDivCd>Type3</cpyrhtDivCd>
+          <mapx>127.7126856416</mapx>
+          <mapy>37.9165380832</mapy>
+          <mlevel>6</mlevel>
+          <modifiedtime>20221228174959</modifiedtime>
+          <sigungucode>13</sigungucode>
+          <tel>
+          </tel>
+          <title>Й╟∙Л⌡░ Й╡╫Л╟╟Л╤╘М≤╪М┐▒</title>
+        </item>
+      </items>
+      <numOfRows>1</numOfRows>
+      <pageNo>1</pageNo>
+      <totalCount>49</totalCount>
     </body>
   </response>
