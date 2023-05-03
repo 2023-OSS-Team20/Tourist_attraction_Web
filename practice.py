@@ -22,10 +22,7 @@ xmlobj = bs4.BeautifulSoup(response, 'lxml-xml')
 
 rows = xmlobj.findAll('item')
 print(rows)
-<<<<<<< HEAD
-=======
 # numOfRows=12&pageNo=1&MobileOS=ETC&MobileApp=AppTest&ServiceKey={API}&listYN=Y&arrange=A&areaCode=&sigunguCode=&cat1=&cat2=&cat3=&keyword=스파&_type=json".format(API = API_key)
 # response = urlopen(URL)
 # json_api = response.read().decode("utf-8")
 # print(json_api)
->>>>>>> 783fe9680395df7766266da3e66136ec8db00eba
