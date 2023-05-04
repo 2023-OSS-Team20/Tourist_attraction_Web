@@ -26,8 +26,8 @@ html, body {
 }
 
 .main {
-    border-left: solid 1px black;
-    border-right: solid 1px black;
+    border-left: solid 3px hotpink;
+    border-right: solid 3px hotpink;
     margin-left: 30vw;
     width: 40vw;
     height: 100vh;
@@ -54,6 +54,7 @@ html, body {
 }
 
 .main_text{
+    mix-blend-mode:overlay;
     margin-top: 20px;
     height: 100%;
     display: flex;
@@ -62,6 +63,9 @@ html, body {
     align-items: stretch;
 }
 .txt {
+    color: aliceblue;
+    border: 2px;
+    border-color: black;
     font-family: '양진체';
     height: 33%;
 }
@@ -75,7 +79,7 @@ html, body {
 
 input {
     position: relative;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 50px;
     width: 98%;
     height: 30px;
