@@ -2,11 +2,17 @@
     0%, 100% {
         background-image: url(images/bg1.jpg);
     }
-    33% {
+    20% {
         background-image: url(images/bg2.jpg);
     }
-    66% {
+    40% {
         background-image: url(images/bg3.jpg);
+    }
+    60% {
+        background-image: url(images/bg4.jpg);
+    }   
+    80% {
+        background-image: url(images/bg5.jpg);
     }
 }
 @font-face {
@@ -26,8 +32,8 @@ html, body {
 }
 
 .main {
-    border-left: solid 3px hotpink;
-    border-right: solid 3px hotpink;
+    border-left: solid 5px hotpink;
+    border-right: solid 5px hotpink;
     margin-left: 30vw;
     width: 40vw;
     height: 100vh;
@@ -37,8 +43,9 @@ html, body {
 }
 .background{
     animation-name: bg-changer;
-
-    animation: bg-changer 30s infinite;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation: bg-changer 50s infinite;
     background-size: cover;
     
 }
@@ -54,6 +61,7 @@ html, body {
 }
 
 .main_text{
+    text-shadow: -3px 0px black, 0px 3px black, 3px 0px black, 0px -3px black;
     mix-blend-mode:overlay;
     margin-top: 20px;
     height: 100%;
@@ -63,14 +71,13 @@ html, body {
     align-items: stretch;
 }
 .txt {
-    color: aliceblue;
-    border: 2px;
-    border-color: black;
+    color: white;
     font-family: '양진체';
     height: 33%;
 }
 
 .main_down {
+    opacity: 0.8;
     background-color: azure;
     border-top: 1px solid black;
     width: 100%;
@@ -97,4 +104,24 @@ input {
 .search-img {
     width: 100%;
     height: 100%;
+}
+
+.keywordWrapper {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.keywordWrapper > div {
+    font-family: '양진체';
+    font-size: 30px;
+    display: flex;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    height: 33%;
+    width: auto;
 }
