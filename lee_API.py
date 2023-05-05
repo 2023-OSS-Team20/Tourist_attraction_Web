@@ -36,6 +36,6 @@ search_url = URL + queryParams
 reqData = requests.get(search_url)
 print(reqData.text)
 
-#r_dict=json.loads(reqData.text)
+r_dict=json.loads(reqData.text)
 
-#rDict = json.load(Qurl)s
+rDict = json.load(search_url)
