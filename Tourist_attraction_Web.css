@@ -71,6 +71,7 @@ html, body {
     align-items: stretch;
 }
 .txt {
+    margin-left: 9px;
     color: white;
     font-family: '양진체';
     height: 33%;
@@ -124,4 +125,8 @@ input {
     align-items: center;
     height: 33%;
     width: auto;
+    box-shadow:1px 1px 3px 1px rgb(0, 160, 160);
+}
+.keywordWrapper > div:hover {
+    box-shadow:1px 1px 6px 2px rgb(0, 160, 160);
 }
