@@ -51,5 +51,21 @@ sample_json2 = json.loads(json_str)
 print(sample_json2)
 # 출력: {'이름': '홍길동', '나이': 25, '특기': ['농구', '도술'], '가족관계': {'아버지': '홍판서', '어머니': '춘섬'}, '결혼 여부': True}
 
+-------
+import json
 
+# JSON 데이터
+json_data = '{"name": ",CHOI", "age": 24, "city": "Seongnam"}'
+
+# JSON 데이터를 파이썬 객체로 변환
+data = json.loads(json_data)
+
+# 파이썬 객체에서 원하는 데이터 추출
+name = data['name']
+age = data['age']
+city = data['city']
+# 추출한 데이터 출력
+print(name)
+print(age)
+print(city)
 
