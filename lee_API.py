@@ -3,9 +3,7 @@ import requests
 from urllib.parse import urlencode, quote_plus, unquote
 from urllib.request import urlopen
 
-Key = "71wIrgVtoA73X2mMZ5VzxKcPT7cUGUdUle%2Be0w%2BwmCc5AO%2F6Oion4qdMPIKWLRlfJFzymt8YCoDf%2FAtpMoSMwA%3D%3D"
-
-
+Key = "nzhfKajoHJmAX1gKiu5WyxWx2fbAfCxBWwOThdrb323YQrUlrW%2B1CmlnI3zWzZvdWwSHpP6665%2F8JdWBK1Pe4g%3D%3D"
 
 #URL 생성
 URL = "http://apis.data.go.kr/B551011/KorService1/searchKeyword1"
@@ -29,6 +27,8 @@ queryParams = '?' + urlencode({
                               quote_plus('keyword' ): keyWord
                               })
 
+
+
 search_url = URL + queryParams
 
 
@@ -36,6 +36,6 @@ search_url = URL + queryParams
 reqData = requests.get(search_url)
 print(reqData.text)
 
-r_dict=json.loads(reqData.text)
+#r_dict=json.loads(reqData.text)
 
 rDict = json.load(search_url)
