@@ -32,6 +32,21 @@ queryParams = '?' + urlencode({
 search_url = URL + queryParams
 
 
+#struct keyword
+
+#abstract link class
+class Linkmaker:
+  def __init__(self):
+    pass
+  def make(self, keyword):
+    pass
+  
+#location linkmaker
+#keyword linkmaker
+
+
+
+
 
 reqData = requests.get(search_url)
 print(reqData.text)
