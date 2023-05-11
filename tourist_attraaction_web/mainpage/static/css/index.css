@@ -1,0 +1,24 @@
+header {
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header->ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+    margin-left: 16px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  html {
+    height: 200%;
+    line-height: 1.6;
+  }
