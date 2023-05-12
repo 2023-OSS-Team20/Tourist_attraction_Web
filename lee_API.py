@@ -1,8 +1,10 @@
 import json
+from msilib.schema import Class
 import requests
 from urllib.parse import urlencode, quote_plus
 
 Key = "nzhfKajoHJmAX1gKiu5WyxWx2fbAfCxBWwOThdrb323YQrUlrW%2B1CmlnI3zWzZvdWwSHpP6665%2F8JdWBK1Pe4g%3D%3D"
+pNo = 1
 
 #struct keyword
 
@@ -13,9 +15,6 @@ class Linkmaker:
   def search(self, keyword):
     pass
    
-  
-#location linkmaker
-
 #keyword linkmaker
 class KeywordLink(Linkmaker):
   def __init__(self):
@@ -23,11 +22,11 @@ class KeywordLink(Linkmaker):
     self.queryParams = "serviceKey=" + Key + '&' + urlencode({
       quote_plus('MobileApp'): 'AppTest',
       quote_plus('MobileOS'): 'ETC',
-      quote_plus('pageNo') : '1',
-      quote_plus('numOfRows') : '10',                               
+      quote_plus('pageNo') : pNo,
+      quote_plus('numOfRows') : '12',                               
       quote_plus('_type') : 'json',
       quote_plus('listYN') : 'Y', 
-      quote_plus('arrange') : 'A' ,   #제목 순 정렬
+      quote_plus('arrange') : 'A' ,   #가나다 순 정렬
     })
     self.word = None
     self.searchURL = None
@@ -36,18 +35,60 @@ class KeywordLink(Linkmaker):
     
   def search(self,keyword):
     self.word = urlencode({quote_plus('keyword') : keyword})
-    print(self.word)
     self.searchURL = self.url + self.queryParams + '&' + self.word
-  
-link = KeywordLink()
-link.search("")
+
+
+class ClassLink(Linkmaker):
+    def __init__(self):
+        self.url = "http://apis.data.go.kr/B551011/KorService1/areaBasedList1?"
+        self.queryParams = "serviceKey=" + Key + '&' + urlencode({
+        quote_plus('MobileApp'): 'AppTest',
+        quote_plus('MobileOS'): 'ETC',
+          quote_plus('pageNo') : pNo,
+          quote_plus('numOfRows') : '12',                               
+          quote_plus('_type') : 'json',
+          quote_plus('listYN') : 'Y', 
+          quote_plus('arrange') : 'A' ,   #가나다 순 정렬
+        })
+        self.word = None
+        self.searchURL = None
+
+    def search(self, big, mid, small):      #big, mid, small은 분류코드 형식 ex) A01 A0101 A01010100
+        self.word = urlencode({quote_plus('cat1') : big,
+                               quote_plus('cat2') : mid,
+                               quote_plus('cat3') : small,
+                               })
+        self.searchURL = self.url + self.queryParams + '&' + self.word
+
+
+
+#main
+'''
+keylink = KeywordLink()
+keylink.search("카페")
  
-search_url = link.searchURL 
+search_url = keylink.searchURL 
 
 print(search_url)
 
 reqData = requests.get(search_url)
 print(reqData.text)
+
+'''
+clink = ClassLink()
+clink.search("A01","A0101","")
+
+search_url = clink.searchURL 
+
+print(search_url)
+
+reqData = requests.get(search_url)
+print(reqData.text)
+
+
+
+
+
 
 #r_dict=json.loads(reqData.text)
 
