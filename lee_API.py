@@ -6,8 +6,6 @@ from urllib.parse import urlencode, quote_plus
 Key = "nzhfKajoHJmAX1gKiu5WyxWx2fbAfCxBWwOThdrb323YQrUlrW%2B1CmlnI3zWzZvdWwSHpP6665%2F8JdWBK1Pe4g%3D%3D"
 pNo = 1
 
-#struct keyword
-
 #abstract link class
 class Linkmaker:
   def __init__(self):
@@ -37,7 +35,7 @@ class KeywordLink(Linkmaker):
     self.word = urlencode({quote_plus('keyword') : keyword})
     self.searchURL = self.url + self.queryParams + '&' + self.word
 
-
+#classification linkmaker
 class ClassLink(Linkmaker):
     def __init__(self):
         self.url = "http://apis.data.go.kr/B551011/KorService1/areaBasedList1?"
