@@ -68,3 +68,8 @@ article.art1 {
 .imagewrap > span:nth-child(4){background:url("../image/bg5.jpg") no-repeat center / cover;}
 .imagewrap > span:hover {flex:2;}
 .imagewrap > span:not(:hover) {flex:0.7 ;}
+
+.hovered-div {
+  background-color: firebrick;
+  display: block;
+}
