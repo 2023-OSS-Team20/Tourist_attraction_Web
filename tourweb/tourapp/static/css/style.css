@@ -69,7 +69,43 @@ article.art1 {
 .imagewrap > span:hover {flex:2;}
 .imagewrap > span:not(:hover) {flex:0.7 ;}
 
-.hovered-div {
-  background-color: firebrick;
-  display: block;
+.bcat1 {
+  background-color: silver;
+  height: 30%;
+  visibility: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  transition: all 0.5s ease-in;
+}
+.bcat2 {
+  background-color: silver;
+  height: 30%;
+  visibility: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  transition: all 0.5s ease-in;
+}
+.bcat3 {
+  background-color: silver;
+  height: 30%;
+  visibility: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  transition: all 0.5s ease-in;
+}
+.bcat4 {
+  background-color: silver;
+  height: 30%;
+  visibility: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  transition: all 0.5s ease-in;
+}
+.show1 {
+  opacity: 0.8;
+  visibility: visible;
 }
