@@ -20,4 +20,14 @@ class ProductList(APIView):
     products = Product.objects.all()
     return Response(products.to_json())
   
+  #??
+  from django.views.generic import View
+from rest_framework.views import APIView
+
+class ProductsView(APIView):
+
+    def get(self, request):
+        products = Product.objects.all()
+        return Response(products.to_json())
+  
   
