@@ -88,6 +88,5 @@ print(reqData.text)
 
 
 
-#r_dict=json.loads(reqData.text)
-
-#rDict = json.load(search_url)
+r_dict=json.loads(reqData.text)
+rDict = json.load(search_url)
