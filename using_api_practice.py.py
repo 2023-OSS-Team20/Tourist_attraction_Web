@@ -20,17 +20,6 @@ class ProductList(APIView):
     products = Product.objects.all()
     return Response(products.to_json())
   
-  #??
-  from django.views.generic import View
-from rest_framework.views import APIView
-
-class ProductsView(APIView):
-
-    def get(self, request):
-        products = Product.objects.all()
-        return Response(products.to_json())
-      
-      
 #axios lib
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -64,6 +53,13 @@ class App extends React.Component {
 
 ReactDOM.render(<App />, document.getElementById('root'));    
   
+# path   
+from django.urls import path
+from .views import MyView
+
+urlpatterns = [
+    path('my-view', MyView.as_view()),
+]
  # 불러오기 ? 
  import requests
 
