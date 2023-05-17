@@ -77,4 +77,14 @@ article.art1 {
   text-align: center;
   font-size: 30px;
   transition: all 0.5s ease-in;
+  box-shadow: 1px 1px 3px 1px rgb(87, 130, 22);
+}
+.bcat1:hover {
+  box-shadow: none;
+  transition: none;
+}
+
+.mcat {
+  background-color: salmon;
+  display: none;
 }
