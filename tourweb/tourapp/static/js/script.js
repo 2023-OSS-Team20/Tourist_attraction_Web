@@ -1,4 +1,3 @@
-// 모든 부모 div 요소를 선택합니다.
 const parentDivs = document.querySelectorAll(".span1");
 
 parentDivs.forEach(parentDiv => {
