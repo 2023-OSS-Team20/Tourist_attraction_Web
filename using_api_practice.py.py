@@ -96,4 +96,33 @@ const App = () => {
 };
 
 export default App;
+#2 
+const fetchData = async () => {
+    try {
+      setError(null);
+      setData(null);
+      setLoading(true);
+
+      const response = await axios.get(URL, {
+        params: {
+          serviceKey: process.env.REACT_APP_API_KEY,
+          numOfRows: 1,
+          pageNo: 10
+        }
+      });
+
+      setData(response.data);
+    } catch(e) {
+      setError(e);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  
+  if(loading) return <div>Loading...</div>;
+  if(error)   return <div>Error...</div>;
+  if(!data)   return null;
   
