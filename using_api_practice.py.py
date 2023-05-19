@@ -126,3 +126,8 @@ const fetchData = async () => {
   if(error)   return <div>Error...</div>;
   if(!data)   return null;
   
+# python connect html
+# json -> html 
+  
+  
+  
