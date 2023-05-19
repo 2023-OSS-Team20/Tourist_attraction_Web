@@ -5,7 +5,7 @@
 
 
 5/19 이현호
-1. pageNO 증가함수 작성
+~~1. pageNO 증가함수 작성
 2. 객체 생성함수 작성
 3. tourapp/models.py에 API.py import 
 4. models.py 연구 함수 호출 및 생성 확인
