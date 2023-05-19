@@ -9,3 +9,4 @@
 2. 객체 생성함수 작성
 3. tourapp/models.py에 API.py import 
 4. models.py 연구 함수 호출 및 생성 확인
+5. 키워드가 어떤 코드를 가지는 지 정리
