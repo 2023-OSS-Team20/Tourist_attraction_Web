@@ -70,8 +70,10 @@ class ClassLink(Linkmaker):
 
 
 
-
-
+def classLinkmake():
+  pass
+def keywordlinkmake():
+  pass
 
 #main
 '''
