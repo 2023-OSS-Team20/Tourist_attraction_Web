@@ -121,6 +121,14 @@ const fetchData = async () => {
   
 # python connect html
 # json -> html 
+
+def json_to_html(json_data):
+    html = ""
+    for key, value in json_data.items():
+        html += "<p><strong>{0}:</strong> {1}</p>".format(key, value)
+    return html
+  
+  html_data = json_to_html(json_data)
   
   
   
