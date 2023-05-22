@@ -109,3 +109,8 @@ article.art1 {
   right: 12px;
   margin: 0;
 }
+
+.searchImage {
+  height: 10px;
+  width: auto;
+}
