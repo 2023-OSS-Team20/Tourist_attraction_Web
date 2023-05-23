@@ -1,6 +1,6 @@
 header {
   height: 50px;
-  position: sticky;
+  position: relative;
   top: 0;
   opacity: 0.8;
   backdrop-filter: blur(30px);
@@ -90,6 +90,7 @@ article.art1 {
 }
 
 .search {
+  margin: 0 auto;
   position: relative;
   width: 300px;
 }
