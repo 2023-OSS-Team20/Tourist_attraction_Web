@@ -19,39 +19,7 @@ class ProductList(APIView):
   def get(self, request):
     products = Product.objects.all()
     return Response(products.to_json())
-  
-#axios lib
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import axios from 'axios';
-
-class App extends React.Component {
-    state = {
-        users: []
-    };
-
-    componentDidMount() {
-        axios.get('https://example.com/api/v1/users')
-            .then((response) => response.data)
-            .then((users) => this.setState({ users }));
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>Users</h1>
-                <ul>
-                    {this.state.users.map((user) => (
-                        <li key={user.id}>{user.name}</li>
-                    ))}
-                </ul>
-            </div>
-        );
-    }
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));    
+    
 
  # 불러오기 ? 
  import requests
