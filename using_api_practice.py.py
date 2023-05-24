@@ -127,5 +127,9 @@ def show_json(request):
     with open('path/to/your/app/data.json') as f:
         json_data = json.load(f)
     return render(request, 'template.html', {'json_data': json_data})
- 
-  
+from django.shortcuts import render
+from django.http import HttpResponse
+# call
+def call_backend(request):
+    result = backend_function()
+    return render(request, 'frontend.html', {'result': result})
