@@ -119,7 +119,13 @@ from myapp.views import display_html
 urlpatterns = [
     path('', display_html, name='display_html'),
 ]
+# render
+import json
+from django.shortcuts import render
 
-
-  
+def show_json(request):
+    with open('path/to/your/app/data.json') as f:
+        json_data = json.load(f)
+    return render(request, 'template.html', {'json_data': json_data})
+ 
   
