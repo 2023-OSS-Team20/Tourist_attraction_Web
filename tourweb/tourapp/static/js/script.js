@@ -24,3 +24,8 @@ parentDivs.forEach(parentDiv => {
   });
 
 });
+
+window.addEventListener("load", function (){
+  var logo = this.document.getElementById("logo");
+  logo.classList.add("logo_visible");
+});

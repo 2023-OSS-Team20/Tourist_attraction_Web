@@ -115,3 +115,17 @@ article.art1 {
   height: 10px;
   width: auto;
 }
+
+.logowrap {
+  margin: 0px;
+}
+
+.logo_default {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.logo_visible {
+  background-color: wheat;
+  opacity: 1;
+}
