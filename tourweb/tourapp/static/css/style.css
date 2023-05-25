@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 header {
   height: 50px;
   position: relative;
@@ -45,6 +52,7 @@ article{
 }
 article.art1 {
   background-image: url("../image/bg1.jpg");
+  background-repeat: no-repeat;
   background-size: 100%;
 }
 .imagewrap {
@@ -89,12 +97,6 @@ article.art1 {
   display: none;
 }
 
-.search {
-  margin: 0 auto;
-  position: relative;
-  width: 300px;
-}
-
 .art1 > input {
   width: 100%;
   border: 1px solid #bbb;
@@ -111,9 +113,27 @@ article.art1 {
   margin: 0;
 }
 
+.search {
+  margin-top: 10vh;
+  position: relative;
+  width: 100%;
+  height: 4vh;
+}
+
 .searchImage {
-  height: 10px;
-  width: auto;
+  float: left;
+  width: 5vmin;
+  height: auto;
+  cursor: pointer;
+}
+
+input {
+  float: left;
+  width: 38vw;
+  height: 5vh;
+  margin-left: 30vw;
+  border-radius: 20px;
+  font-size: 2vh;
 }
 
 .logowrap {
@@ -121,11 +141,16 @@ article.art1 {
 }
 
 .logo_default {
+  font-family: 'twayair';
+  text-align: left;
+  margin-left: 30vw;
   opacity: 0;
   transition: opacity 3s;
+  font-size: 12vmin;
+  color: royalblue;
 }
 
 .logo_visible {
-  background-color: wheat;
   opacity: 1;
 }
+
