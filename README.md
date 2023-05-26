@@ -9,4 +9,4 @@
 5. view.py 연구 함수 호출 및 생성 확인(알고리즘 후 HTML로 반환)
 6. 대,중분류가 각각 어떤 코드를 가지는지 정리
 7. json to html templete 고려(URL를 json으로 변형해야하는지)
-8. 
+8. django 문법 맞게끔 이식
