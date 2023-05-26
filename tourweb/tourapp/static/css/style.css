@@ -53,7 +53,7 @@ article{
 article.art1 {
   background-image: url("../image/bg1.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  width: 100%;
 }
 .imagewrap {
   display: flex;
@@ -114,7 +114,7 @@ article.art1 {
 }
 
 .search {
-  margin-top: 10vh;
+  margin-top: 8vh;
   position: relative;
   width: 100%;
   height: 4vh;
@@ -151,6 +151,7 @@ input {
 }
 
 .logo_visible {
+  font-size: 12vmin;
   opacity: 1;
 }
 
