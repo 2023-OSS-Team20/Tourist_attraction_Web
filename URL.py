@@ -11,7 +11,7 @@ class Link:
   def pageNo(int):
     pass
    
-#keyword linkmaker
+#keywordlink
 class KeywordLink(Link):
   def __init__(self):
     self.url = "http://apis.data.go.kr/B551011/KorService1/searchKeyword1?"
@@ -26,8 +26,7 @@ class KeywordLink(Link):
     })
     self.pNo = urlencode({quote_plus('pageNo') : 1})
     self.word = None
-    self.searchURL = None
-
+    
   def pageNo(self,num):
     self.pNo = urlencode({quote_plus('pageNo') : num})
     self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
@@ -35,7 +34,6 @@ class KeywordLink(Link):
     
   def search(self,keyword):
     self.word = urlencode({quote_plus('keyword') : keyword})
-    self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
 
 #classification linkmaker
 class ClassLink(Link):
@@ -65,48 +63,58 @@ class ClassLink(Link):
     })
     self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
 
-'''
-#factory
-class Lmaker():
-  def make(self) -> Link:
+#abstract factory
+class Linkmaker():
+  def __init__():
+    pass
+  def Create():
+    pass
+  def pageChange():
+    pass
     
+class KeywordLmaker(Linkmaker):
+  def __init__ (self, keyword):
+    self.keylink = KeywordLink()
+    self.keyword = keyword
+  
     
-class KeywordLmaker(Lmaker):
-
-class ClassLmaker(Lmaker):
+  def Create(self):
+    self.keylink.search(self.keyword)
+    return self.keylink.url + self.keylink.queryParams + '&' + self.keylink.pNo + '&' + self.keylink.word
   
-#linkmakefunction
-def keyLinkmake():
+  def pageChange(self, number):
+    self.keylink.pageNo(number)
+    return self.keylink.url + self.keylink.queryParams + '&' + self.keylink.pNo + '&' + self.keylink.word
   
-def classLinkmake():
-'''
 
-#main
 
-keylink = KeywordLink()
-keylink.search("카페")
- 
-search_url = keylink.searchURL 
+class ClassLmaker(Linkmaker):
+  def __init__(self, big, mid):
+    self.classlink = ClassLink()
+    self.big = big
+    self.mid = mid
+  
+  def Create(self):
+    self.classlink.search(self.big, self.mid)
+    
+  def pageChange(self, number):
+    self.classlink.pageNo(number)
+    return self.classlink.url + self.classlink.queryParams + '&' + self.classlink.pNo + '&' + self.classlink.word
 
-print(search_url)
-
-keylink.pageNo(3)
-
-search_url = keylink.searchURL 
-
-print(search_url)
 
 '''
-clink = ClassLink()
-clink.search("A01","A0101")
-search_url = clink.searchURL 
+klink = KeywordLmaker("에버")
 
-print(search_url)
+clink = ClassLmaker("A01","A0101")
 
-clink.pageNo(3)
-search_url = clink.searchURL
+url = klink.Create()
+print(url)
+url = klink.pageChange(2)
+print(url)
 
-print(search_url)
+url = clink.Create()
+print(url)
+url = klink.pageChange(3)
+print(url)
 '''
-
 
