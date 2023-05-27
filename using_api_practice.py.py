@@ -75,20 +75,6 @@ def json_to_html(json_data):
     return html
   
   html_data = json_to_html(json_data)
-# html templates sample code 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Page</title>
-</head>
-<body>
-    {% for item in data %}
-        <h1>{{ item.name }}</h1>
-        <p>Age: {{ item.age }}</p>
-        <p>Country: {{ item.country }}</p>
-    {% endfor %}
-</body>
-</html>
 
 # url 매핑 
 from django.urls import path
