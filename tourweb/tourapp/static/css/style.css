@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'twayair';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-family: "twayair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,32 +20,32 @@ header {
   align-items: center;
   color: black;
 }
-a{
+a {
   text-decoration: none;
 }
 ul {
   list-style-type: none;
   padding: 0;
-  }
-      
+}
+
 li {
   display: inline-block;
   margin-left: 16px;
   font-size: 18px;
   font-weight: bold;
-  }
-      
+}
+
 html {
   height: 200%;
   line-height: 1.6;
-  }
-body{
+}
+body {
   height: 100%;
 }
-section{
+section {
   height: 100%;
 }
-article{
+article {
   display: block;
   height: 50%;
   width: auto;
@@ -53,7 +54,7 @@ article{
 article.art1 {
   background-image: url("../image/bg1.jpg");
   background-repeat: no-repeat;
-  width: 100%;
+  background-size: cover;
 }
 .imagewrap {
   display: flex;
@@ -67,15 +68,27 @@ article.art1 {
   display: inline-block;
   text-align: center;
   font-size: 50px;
-  transition:all 1s;  
+  transition: all 1s;
 }
 
-.imagewrap > span:nth-child(1){background:url("../image/bg2.jpg") no-repeat center / cover;}
-.imagewrap > span:nth-child(2){background:url("../image/bg3.jpg") no-repeat center / cover;}
-.imagewrap > span:nth-child(3){background:url("../image/bg4.jpg") no-repeat center / cover;}
-.imagewrap > span:nth-child(4){background:url("../image/bg5.jpg") no-repeat center / cover;}
-.imagewrap > span:hover {flex:2;}
-.imagewrap > span:not(:hover) {flex:0.7 ;}
+.imagewrap > span:nth-child(1) {
+  background: url("../image/bg2.jpg") no-repeat center / cover;
+}
+.imagewrap > span:nth-child(2) {
+  background: url("../image/bg3.jpg") no-repeat center / cover;
+}
+.imagewrap > span:nth-child(3) {
+  background: url("../image/bg4.jpg") no-repeat center / cover;
+}
+.imagewrap > span:nth-child(4) {
+  background: url("../image/bg5.jpg") no-repeat center / cover;
+}
+.imagewrap > span:hover {
+  flex: 2;
+}
+.imagewrap > span:not(:hover) {
+  flex: 0.7;
+}
 
 .bcat1 {
   background-color: greenyellow;
@@ -106,7 +119,7 @@ article.art1 {
 }
 
 .art1 > img {
-  position : absolute;
+  position: absolute;
   width: 17px;
   top: 10px;
   right: 12px;
@@ -141,7 +154,7 @@ input {
 }
 
 .logo_default {
-  font-family: 'twayair';
+  font-family: "twayair";
   text-align: left;
   margin-left: 30vw;
   opacity: 0;
@@ -154,4 +167,3 @@ input {
   font-size: 12vmin;
   opacity: 1;
 }
-

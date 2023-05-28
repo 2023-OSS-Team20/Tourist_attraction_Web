@@ -22,5 +22,6 @@ import tourapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', tourapp.views.index, name='index'),
+    path('result/', tourapp.views.result, name='result'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
