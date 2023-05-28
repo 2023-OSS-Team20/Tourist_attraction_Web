@@ -9,32 +9,6 @@ def get_api_data(url):
   else:
     raise Exception('API request failed')
 
-# front 
-const App = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const getApiData = async () => {
-      try {
-        const response = await get_api_data('https://api.example.com/data');
-        setData(response);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    getApiData();
-  }, []);
-
-  return (
-    <div>
-      <h1>API Data</h1>
-      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
-    </div>
-  );
-};
-
-export default App;
 #2 
 const fetchData = async () => {
     try {
