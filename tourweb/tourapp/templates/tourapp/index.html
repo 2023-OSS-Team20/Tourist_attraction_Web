@@ -25,16 +25,12 @@
             <div>문득</div>
             <div>여행을</div>
             <div>떠나고 싶을때</div>
-            <button
-              onclick="location.href='{% url 'result' %}', addListofApi()"
-            >
-              Result 페이지로 이동
-            </button>
           </div>
         </div>
         <div class="search">
           <input type="text" placeholder="검색어 입력" />
           <img
+            onclick="location.href='{% url 'result' %}', addListofApi()"
             class="searchImage"
             src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"
           />
