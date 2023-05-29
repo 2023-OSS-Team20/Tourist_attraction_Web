@@ -8,7 +8,7 @@ def get_api_data(url):
     return response.json()
   else:
     raise Exception('API request failed')
-
+    
 #2 
 const fetchData = async () => {
     try {
@@ -58,9 +58,16 @@ urlpatterns = [
     path('', display_html, name='display_html'),
 ]
 # render
-import json
 from django.shortcuts import render
 
+def index(request):
+    return render(request, 'tourapp/index.html')
+
+def result(request):
+    return render(request, 'tourapp/result.html')
+
+ 
+ 
 def show_json(request):
     with open('path/to/your/app/data.json') as f:
         json_data = json.load(f)
