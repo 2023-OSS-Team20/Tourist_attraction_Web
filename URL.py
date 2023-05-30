@@ -102,7 +102,7 @@ class ClassLmaker(Linkmaker):
     return self.classlink.url + self.classlink.queryParams + '&' + self.classlink.pNo + '&' + self.classlink.word
 
 
-'''
+
 klink = KeywordLmaker("에버")
 
 clink = ClassLmaker("A01","A0101")
@@ -116,5 +116,5 @@ url = clink.Create()
 print(url)
 url = klink.pageChange(3)
 print(url)
-'''
+
 
