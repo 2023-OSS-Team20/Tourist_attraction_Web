@@ -66,7 +66,7 @@ def index(request):
 def result(request):
     return render(request, 'tourapp/result.html')
 
- 
+ # con
  
 def show_json(request):
     with open('path/to/your/app/data.json') as f:
