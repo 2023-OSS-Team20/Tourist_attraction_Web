@@ -29,7 +29,7 @@ class KeywordLink(Link):
     
   def pageNo(self,num):
     self.pNo = urlencode({quote_plus('pageNo') : num})
-    self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
+    self.searchURL = self.url + self.queryParams   + '&' + self.pNo + '&' +self.word
 
     
   def search(self,keyword):
