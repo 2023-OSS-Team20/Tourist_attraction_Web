@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="ko">
-  <head>
-    <script src="APISelector.js"></script>
-  </head>
+  <head> </head>
   <body id="body">
-    <button onclick="addNameOfApi()">추가</button>
-
-    <div id="container">요소들</div>
+    <div>{{ data }}</div>
     <button onclick="location.href='{% url 'index' %}'">돌아가기</button>
     <script></script>
   </body>

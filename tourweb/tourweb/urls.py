@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-import tourapp.views
+from tourapp.views import result, index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', tourapp.views.index, name='index'),
-    path('result/', tourapp.views.result, name='result'),
+    path('', index, name='index'),
+    path('result/', result, name='result'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,11 +1,12 @@
 from django.shortcuts import render
-import urlmake
+from tourapp.urlmake import KeywordLmaker
 import json
 import requests
 
-def result_view(request):
+
+def result(request):
     keyword = "에버"
-    link = urlmake.KeywordLmaker(keyword)
+    link = KeywordLmaker(keyword)
     url = requests.get(link.Create())
     text = url.text
     data = json.loads(text)
@@ -14,13 +15,11 @@ def result_view(request):
         'data': data
     }
     
-    return render(request, 'result.html', context)
-
-
+    return render(request, 'tourapp/result.html', context)
 
 
 def index(request):
     return render(request, 'tourapp/index.html')
 
-def result(request):
-    return render(request, 'tourapp/result.html')
+# def result(request):
+#     return render(request, 'tourapp/result.html')
