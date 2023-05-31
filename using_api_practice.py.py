@@ -65,16 +65,20 @@ def index(request):
 
 def result(request):
     return render(request, 'tourapp/result.html')
-
- # con
- 
-def show_json(request):
-    with open('path/to/your/app/data.json') as f:
-        json_data = json.load(f)
-    return render(request, 'template.html', {'json_data': json_data})
-from django.shortcuts import render
-from django.http import HttpResponse
-# call
-def call_backend(request):
-    result = backend_function()
-    return render(request, 'frontend.html', {'result': result})
+# 페이징
+def CategoryView(request, category_name):
+    page = request.GET.get("page")
+    category_posts = models.Post.objects.filter(category=category_name)
+    paginator = Paginator(category_posts, 10)
+    posts = paginator.get_page(page)
+    categories = models.Category.objects.all()
+    return render(
+        request,
+        "posts/categories.html",
+        {
+            "category_name": category_name,
+            "category_posts": category_posts,
+            "categories": categories,
+            "posts": posts,
+        },
+    )
