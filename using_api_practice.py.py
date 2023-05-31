@@ -82,3 +82,12 @@ def CategoryView(request, category_name):
             "posts": posts,
         },
     )
+from django.core.paginator import Paginator
+
+def my_view(request):
+    items = MyModel.objects.all()
+    paginator = Paginator(items, 10) 
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'my_template.html', {'page_obj': page_obj})
