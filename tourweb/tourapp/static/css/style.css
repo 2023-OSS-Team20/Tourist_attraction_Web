@@ -38,6 +38,8 @@ li {
 html {
   height: 200%;
   line-height: 1.6;
+  padding: 0px;
+  margin: 0;
 }
 body {
   height: 100%;
@@ -103,11 +105,13 @@ article.art1 {
 .bcat1:hover {
   box-shadow: none;
   transition: none;
+  cursor: pointer;
 }
 
 .mcat {
   background-color: salmon;
   display: none;
+  cursor: pointer;
 }
 
 .art1 > input {
