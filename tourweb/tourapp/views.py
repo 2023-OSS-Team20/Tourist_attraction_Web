@@ -3,7 +3,7 @@ from tourapp.urlmake import KeywordLmaker, ClassLmaker, IdLMaker
 import json
 import requests
 
-url = "" #pagoNo 수정 저장용 
+# url = "" #pagoNo 수정 저장용 
 
 def Keyword_result(request):
     if request.method == 'GET':
