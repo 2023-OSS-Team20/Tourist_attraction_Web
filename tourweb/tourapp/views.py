@@ -3,7 +3,7 @@ from tourapp.urlmake import KeywordLmaker, ClassLmaker, IdLMaker
 import json
 import requests
 
-
+url = "" #pagoNo 수정 저장용 
 
 def Keyword_result(request):
     if request.method == 'GET':
@@ -27,6 +27,19 @@ def class_result(request):
     link = ClassLmaker(big, mid, small)
     url = requests.get(link.Create())
     text = url.text
+    data = json.loads(text)
+    
+    context = {
+        'data': data
+    }
+    return render(request, 'tourapp/result.html', context)
+
+def Id_result(request):
+    Id = "12650"
+    
+    link = IdLMaker(Id)
+    Idurl = requests.get(link.Create())
+    text = Idurl.text
     data = json.loads(text)
     
     context = {
