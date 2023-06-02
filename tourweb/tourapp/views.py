@@ -15,9 +15,12 @@ class linkStrategy:
     
     def pNoChange(self,number):
         return self.linkfac.pageChange(number)
+    
+linkfac = linkStrategy()
 
 def Keyword_result(request):
-    keyword = "에버"
+    if request.method == 'GET':
+        keyword = request.GET.get('keyword')
     link = KeywordLmaker(keyword)
     url = requests.get(link.Create())
     text = url.text
