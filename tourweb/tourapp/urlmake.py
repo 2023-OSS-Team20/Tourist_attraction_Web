@@ -119,8 +119,8 @@ class IdLMaker(Linkmaker):
     self.Id = Id
     
   def Create(self):
-    self.keylink.search(self.Id)
-    return self.keylink.url + self.keylink.queryParams + '&' + self.keylink.pNo + '&' + self.keylink.word
+    self.Idlink.search(self.Id)
+    return self.Idlink.url + self.Idlink.queryParams + '&' + self.Idlink.word
 
 
 '''
