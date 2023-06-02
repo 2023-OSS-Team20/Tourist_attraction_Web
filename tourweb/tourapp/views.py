@@ -1,9 +1,22 @@
 from django.shortcuts import render
-from tourapp.urlmake import KeywordLmaker, ClassLmaker, IdLMaker
+from urlmake import Linkmaker,KeywordLmaker, ClassLmaker, IdLMaker
 import json
 import requests
 
-# url = "" #pagoNo 수정 저장용 
+class linkStrategy:
+    def __init__(self):
+        self.linkfac = 0
+    
+    def setlink(self, linkfac:Linkmaker):
+        self.linkfac = linkfac
+    
+    def create(self):
+        return self.linkfac.Create()
+    
+    def pNoChange(self,number):
+        return self.linkfac.pageChange(number)
+    
+linkfac = linkStrategy()
 
 def Keyword_result(request):
     if request.method == 'GET':
@@ -40,8 +53,8 @@ def Id_result(request):
     Id = "12650"
     
     link = IdLMaker(Id)
-    Idurl = requests.get(link.Create())
-    text = Idurl.text
+    url = requests.get(link.Create())
+    text = url.text
     data = json.loads(text)
     
     context = {
