@@ -112,6 +112,7 @@ class ClassLmaker(Linkmaker):
   
   def Create(self):
     self.classlink.search(self.big, self.mid, self.small)
+    return self.classlink.url + self.classlink.queryParams + '&' + self.classlink.pNo + '&' + self.classlink.word
     
   def pageChange(self, number):
     self.classlink.pageNo(number)
