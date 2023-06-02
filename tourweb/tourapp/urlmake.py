@@ -8,8 +8,6 @@ class Link:
     pass
   def search(self):
     pass
-  def pageNo(int):
-    pass
    
 #keywordlink
 class KeywordLink(Link):
@@ -63,14 +61,26 @@ class ClassLink(Link):
       quote_plus('cat3') : small
       })
     self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
+    
+class IdLink(Link):
+  def __init__(self):
+    self.url = "http://apis.data.go.kr/B551011/KorService1/detailCommon1?"
+    self.queryParams = "serviceKey=" + Key + '&' + urlencode({
+      quote_plus('MobileApp'): 'AppTest',
+      quote_plus('MobileOS'): 'ETC',                              
+      quote_plus('_type') : 'json'
+    })
+    self.word = None
+    self.searchURL = None
+    
+  def search(self,Id):
+    self.word = urlencode({quote_plus('contId') : Id})
 
 #abstract factory
 class Linkmaker():
   def __init__():
     pass
   def Create():
-    pass
-  def pageChange():
     pass
     
 class KeywordLmaker(Linkmaker):
@@ -102,6 +112,15 @@ class ClassLmaker(Linkmaker):
   def pageChange(self, number):
     self.classlink.pageNo(number)
     return self.classlink.url + self.classlink.queryParams + '&' + self.classlink.pNo + '&' + self.classlink.word
+  
+class IdLMaker(Linkmaker):
+  def __init__(self, Id):
+    self.Idlink = IdLink()
+    self.Id = Id
+    
+  def Create(self):
+    self.keylink.search(self.Id)
+    return self.keylink.url + self.keylink.queryParams + '&' + self.keylink.pNo + '&' + self.keylink.word
 
 
 '''
