@@ -21,15 +21,16 @@
         </nav>
       </header>
       <div id="body">
-        <div class="info">
-          {% include "tourapp/searchbar.html" %}
-          <div class="infoNumber">
-            검색 결과: {{data.response.body.totalCount}}개
-          </div>
+        <div class="info">{% include "tourapp/searchbar.html" %}</div>
+        <div class="infoNumber">
+          검색 결과: {{data.response.body.totalCount}}개
         </div>
         <div class="listwrap">
           {% for item in data.response.body.items.item %}
-          <div class="itemDiv" key="{{item.contentid}}" onclick="">
+          <div class="itemDiv">
+            <form action="/result/?1111">
+              <input type="hidden" name="{{item.contId}}" />
+            </form>
             <div class="imgwrap">
               {% if item.firstimage %}
               <img src="{{item.firstimage}}" />
