@@ -8,6 +8,8 @@ class Link:
     pass
   def search(self):
     pass
+  def pageNo(self):
+    pass
    
 #keywordlink
 class KeywordLink(Link):
@@ -81,6 +83,8 @@ class Linkmaker():
   def __init__():
     pass
   def Create():
+    pass
+  def pageChange():
     pass
     
 class KeywordLmaker(Linkmaker):
