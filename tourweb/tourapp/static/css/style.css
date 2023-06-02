@@ -6,6 +6,11 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   height: 50px;
   position: relative;
@@ -19,6 +24,9 @@ header {
   justify-content: space-between;
   align-items: center;
   color: black;
+}
+header > a {
+  color: wheat;
 }
 a {
   text-decoration: none;
@@ -112,6 +120,13 @@ article.art1 {
   background-color: salmon;
   display: none;
   cursor: pointer;
+}
+
+.mcat:hover {
+  background-color: teal;
+  display: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 3px gray inset;
 }
 
 .art1 > input {

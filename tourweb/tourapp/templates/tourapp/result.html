@@ -10,33 +10,39 @@
   </head>
 
   <body>
-    <header class="Header">
-      <h1><a href="{% url 'index' %}">C&I</a></h1>
-      <nav>
-        <ul>
-          <li><a>About</a></li>
-          <li><a>Help</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div id="body">
-      <div class="info">검색 결과: {{data.response.body.totalCount}}개</div>
-      <div class="listwrap">
-        {% for item in data.response.body.items.item %}
-        <div class="itemDiv" key="{{forloop.counter}}">
-          <div class="imgwrap">
-            {% if item.firstimage %}
-            <img src="{{item.firstimage}}" />
-            {% else %}
-            <img src="{% static '/image/noimg.jpg' %}" />
-            {% endif %}
+    <div class="bodywrap">
+      <header class="Header">
+        <h1><a href="{% url 'index' %}">C&I</a></h1>
+        <nav>
+          <ul>
+            <li><a>About</a></li>
+            <li><a>Help</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="body">
+        <div class="info">
+          {% include "tourapp/searchbar.html" %}
+          <div class="infoNumber">
+            검색 결과: {{data.response.body.totalCount}}개
           </div>
-          <div class="listTitle">{{item.title}}</div>
         </div>
-        {% endfor %}
+        <div class="listwrap">
+          {% for item in data.response.body.items.item %}
+          <div class="itemDiv" key="{{item.contentid}}" onclick="">
+            <div class="imgwrap">
+              {% if item.firstimage %}
+              <img src="{{item.firstimage}}" />
+              {% else %}
+              <img src="{% static '/image/noimg.jpg' %}" />
+              {% endif %}
+            </div>
+            <div class="listTitle">{{item.title}}</div>
+          </div>
+          {% endfor %}
+        </div>
       </div>
+      {{data}}
     </div>
-    <button onclick="location.href='{% url 'index' %}'">돌아가기</button>
-    {{data}}
   </body>
 </html>

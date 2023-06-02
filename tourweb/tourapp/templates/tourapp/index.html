@@ -2,6 +2,11 @@
 {% load static %}
 <html lang="ko">
   <head>
+    <script>
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -27,13 +32,7 @@
             <div>떠나고 싶을때</div>
           </div>
         </div>
-        <div class="search">
-          <input type="text" placeholder="검색어 입력" />
-          <img
-            class="searchImage"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"
-          />
-        </div>
+        {% include "tourapp/searchbar.html" %}
       </article>
       <article class="art2">
         <div class="imagewrap">
@@ -42,13 +41,7 @@
               관광지
               <div id="bcat1" class="bcat1">
                 대분류
-                <div
-                  id="mcat"
-                  class="mcat"
-                  onclick="location.href='{% url 'result' %}', addListofApi()"
-                >
-                  검색
-                </div>
+                <div id="mcat" class="mcat">검색</div>
                 <div id="mcat" class="mcat">중분류2</div>
                 <div id="mcat" class="mcat">중분류3</div>
               </div>

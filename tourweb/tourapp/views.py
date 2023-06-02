@@ -13,11 +13,10 @@ def result(request):
     
     context = {
         'data': data
+        
     }
     
     return render(request, 'tourapp/result.html', context)
-
-def 
 
 
 def index(request):
