@@ -1,0 +1,33 @@
+<style>
+  .search {
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+    height: 8vh;
+  }
+  .txt {
+    float: left;
+    width: 38vw;
+    height: 5vh;
+    margin-left: 20vw;
+    border-radius: 20px;
+    font-size: 2vh;
+  }
+  .searchImage {
+    float: left;
+    margin: 0;
+    width: 5vmin;
+    cursor: pointer;
+    border-radius: 0;
+  }
+</style>
+<div class="search">
+  <form action="/Keyword_result/" method="get">
+    <input class="txt" type="text" name="keyword" placeholder="검색어 입력" />
+    <input
+      class="searchImage"
+      type="image"
+      src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"
+    />
+  </form>
+</div>
