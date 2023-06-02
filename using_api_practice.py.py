@@ -91,3 +91,6 @@ def my_view(request):
     page_obj = paginator.get_page(page_number)
 
     return render(request, 'my_template.html', {'page_obj': page_obj})
+   
+   #하위페이지 시작
+   
