@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from urlmake import Linkmaker,KeywordLmaker, ClassLmaker, IdLMaker
+from tourapp.urlmake import Linkmaker, KeywordLmaker, ClassLmaker, IdLMaker
 import json
 import requests
 
