@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from tourapp.urlmake import KeywordLmaker
+from urlmake import KeywordLmaker
 import json
 import requests
 
@@ -16,6 +16,8 @@ def result(request):
     }
     
     return render(request, 'tourapp/result.html', context)
+
+def 
 
 
 def index(request):

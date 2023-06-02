@@ -56,11 +56,12 @@ class ClassLink(Link):
     self.pNo = urlencode({quote_plus('pageNo') : num})
     self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
 
-  def search(self, big, mid):      #big, mid 분류코드 형식 ex) A01 A0101 A01010100
+  def search(self, big, mid, small):      #big, mid 분류코드 형식 ex) A01 A0101 A01010100
     self.word = urlencode({
       quote_plus('cat1') : big,
       quote_plus('cat2') : mid,
-    })
+      quote_plus('cat3') : small
+      })
     self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
 
 #abstract factory
@@ -89,13 +90,14 @@ class KeywordLmaker(Linkmaker):
 
 
 class ClassLmaker(Linkmaker):
-  def __init__(self, big, mid):
+  def __init__(self, big, mid, small):
     self.classlink = ClassLink()
     self.big = big
     self.mid = mid
+    self.small = small
   
   def Create(self):
-    self.classlink.search(self.big, self.mid)
+    self.classlink.search(self.big, self.mid, self.small)
     
   def pageChange(self, number):
     self.classlink.pageNo(number)
