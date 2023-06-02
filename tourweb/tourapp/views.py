@@ -18,8 +18,6 @@ def Keyword_result(request):
     }
     return render(request, 'tourapp/result.html', context)
 
-<<<<<<< HEAD
-=======
 def class_result(request):
     big = "A01"
     mid = "A0101"
@@ -35,7 +33,6 @@ def class_result(request):
     }
     return render(request, 'tourapp/result.html', context)
 
->>>>>>> 8ede7feae3742c56a4400b74bd75df875d50471f
 
 def index(request):
     return render(request, 'tourapp/index.html')
