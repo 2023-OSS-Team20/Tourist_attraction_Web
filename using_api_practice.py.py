@@ -27,4 +27,13 @@ def my_view(request):
     return render(request, 'my_template.html', {'page_obj': page_obj})
    
    #하위페이지 시작
-   
+   <!DOCTYPE html>
+<html>
+<head>
+  <title>하위 페이지 1</title>
+</head>
+<body>
+  <h1>하위 페이지 1</h1>
+  <p>.</p>
+</body>
+</html>
