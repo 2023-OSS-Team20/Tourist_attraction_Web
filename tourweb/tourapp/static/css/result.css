@@ -96,3 +96,9 @@ img {
 .search {
   margin-top: 5vh;
 }
+
+.body {
+  background-image: url("../image/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
