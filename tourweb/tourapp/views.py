@@ -21,8 +21,14 @@ linkfac = linkStrategy()
 def Keyword_result(request):
     if request.method == 'GET':
         keyword = request.GET.get('keyword')
-    link = KeywordLmaker(keyword)
-    url = requests.get(link.Create())
+    else:   #오류 처리를 위해
+        keyword = None    
+    #link = KeywordLmaker(keyword)
+    #url = requests.get(link.Create())
+            
+    linkfac.setlink(KeywordLmaker(keyword))
+    url = requests.get(linkfac.create())  
+    
     text = url.text
     data = json.loads(text)
     
@@ -33,12 +39,19 @@ def Keyword_result(request):
     return render(request, 'tourapp/result.html', context)
 
 def class_result(request):
-    big = "A01"
-    mid = "A0101"
-    small = None
+    if request.method == 'GET':
+        big = request.GET.get('big')
+        mid = request.GET.get('mid')
+        small = request.GET.get('small')
+    else:   #오류 처리를 위해
+        big, mid, small = None  
     
-    link = ClassLmaker(big, mid, small)
-    url = requests.get(link.Create())
+    #link = ClassLmaker(big, mid, small)
+    #url = requests.get(link.Create())
+    
+    linkfac.setlink(ClassLmaker(big, mid, small))
+    url = requests.get(linkfac.create())
+    
     text = url.text
     data = json.loads(text)
     
@@ -48,7 +61,10 @@ def class_result(request):
     return render(request, 'tourapp/result.html', context)
 
 def Id_result(request):
-    Id = "12650"
+    if request.method == 'GET':
+        Id = request.GET.get('contentsId')
+    else:   #오류 처리를 위해
+        Id = None  
     
     link = IdLMaker(Id)
     url = requests.get(link.Create())
