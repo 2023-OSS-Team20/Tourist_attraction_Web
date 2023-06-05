@@ -1,0 +1,13 @@
+<script></script>
+
+<body>
+  <div class="buttons">
+    {%if data.response.body.pageNo != "1" %}
+    <div class="btnBack">뒤로</div>
+    {% endif %}
+    <div>gggg</div>
+    {% for i in range({data.response.body.numOfRows}) %}
+    <div id="{{i}}">아이디 : {{i}}</div>
+    {% endfor %}
+  </div>
+</body>

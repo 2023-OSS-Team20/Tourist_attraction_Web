@@ -24,4 +24,3 @@ urlpatterns = [
     path('', index, name='index'),
     path('Keyword_result/', Keyword_result, name='result'),
 ]
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

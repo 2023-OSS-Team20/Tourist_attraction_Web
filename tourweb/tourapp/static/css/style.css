@@ -101,32 +101,32 @@ article.art1 {
 }
 
 .bcat1 {
-  background-color: greenyellow;
   height: 30%;
   display: none;
   position: relative;
   text-align: center;
   font-size: 30px;
   transition: all 0.5s ease-in;
-  box-shadow: 1px 1px 3px 1px rgb(87, 130, 22);
+  box-shadow: none;
 }
 .bcat1:hover {
-  box-shadow: none;
+  box-shadow: 1px 1px 3px 1px rgb(87, 130, 22);
   transition: none;
   cursor: pointer;
 }
 
 .mcat {
+  margin: 5px;
+  border-color: orangered;
   background-color: salmon;
   display: none;
   cursor: pointer;
 }
 
 .mcat:hover {
-  background-color: teal;
   display: none;
   cursor: pointer;
-  box-shadow: 3px 3px 3px 3px gray inset;
+  box-shadow: 2px 2px 2px 2px red inset;
 }
 
 .art1 > input {
@@ -144,7 +144,7 @@ article.art1 {
   right: 12px;
   margin: 0;
 }
-
+/* 
 .search {
   margin-top: 8vh;
   position: relative;
@@ -157,6 +157,7 @@ article.art1 {
   width: 5vmin;
   height: auto;
   cursor: pointer;
+  border-radius: 0;
 }
 
 input {
@@ -166,7 +167,7 @@ input {
   margin-left: 30vw;
   border-radius: 20px;
   font-size: 2vh;
-}
+} */
 
 .logowrap {
   margin: 0px;
