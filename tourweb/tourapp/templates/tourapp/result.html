@@ -7,6 +7,7 @@
       type="text/css"
       href="{% static 'css/result.css' %}?after"
     />
+    <script src="{% static 'js/script.js' %}"></script>
   </head>
 
   <body>
@@ -42,6 +43,7 @@
           </div>
           {% endfor %}
         </div>
+        {% include "tourapp/pagenationbar.html" %}
       </div>
       {{data}}
     </div>
