@@ -30,3 +30,10 @@ window.addEventListener("load", function () {
 });
 
 //pagenation
+
+let totalpage = Math.ceil(parseInt(data.response.body.numOfRows) / 12);
+
+const pgnbar = document.getElementsById(".btnlist");
+for (i = 1; i <= 2; i++) {
+  totalpage.innerHTML();
+}

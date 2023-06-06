@@ -2,12 +2,10 @@
 
 <body>
   <div class="buttons">
-    {%if data.response.body.pageNo != "1" %}
-    <div class="btnBack">뒤로</div>
+    {%if data.response.body.pageNo != 1 %}
+    <div class="btnBack">{{ data.response.body.pageNo}}</div>
     {% endif %}
+    <div class="btnlist" id="btnlist"></div>
     <div>gggg</div>
-    {% with num=data.response.body.numOfRows %} {% for i in num %}
-    <div id="{{i}}">아이디 : {{i}}</div>
-    {% endfor %} {% endwith %}
   </div>
 </body>
