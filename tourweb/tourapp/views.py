@@ -33,8 +33,7 @@ def Keyword_result(request):
     data = json.loads(text)
     
     context = {
-        'data': data
-        
+        'data': data,
     }
     return render(request, 'tourapp/result.html', context)
 

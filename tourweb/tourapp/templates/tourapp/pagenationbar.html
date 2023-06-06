@@ -6,8 +6,8 @@
     <div class="btnBack">뒤로</div>
     {% endif %}
     <div>gggg</div>
-    {% for i in range({data.response.body.numOfRows}) %}
+    {% with num=data.response.body.numOfRows %} {% for i in num %}
     <div id="{{i}}">아이디 : {{i}}</div>
-    {% endfor %}
+    {% endfor %} {% endwith %}
   </div>
 </body>
