@@ -109,3 +109,14 @@ img {
   background-color: red;
   cursor: pointer;
 }
+
+.btnBack:hover {
+  background-color: #fff;
+}
+
+.pgbtn {
+  color: red;
+  background-color: greenyellow;
+  display: inline-block;
+  cursor: pointer;
+}

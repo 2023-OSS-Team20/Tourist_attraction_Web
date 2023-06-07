@@ -7,7 +7,6 @@
       type="text/css"
       href="{% static 'css/result.css' %}?after"
     />
-    <script src="{% static 'js/script.js' %}"></script>
   </head>
 
   <body>
@@ -43,9 +42,19 @@
           </div>
           {% endfor %}
         </div>
-        {% include "tourapp/pagenationbar.html" %}
+        <div class="buttons">
+          {%if data.response.body.pageNo == 1 %}
+          <div class="btnBack">{{data.response.body.pageNo}}</div>
+          {% endif %}
+          <div class="btnlist" id="btnlist"></div>
+        </div>
       </div>
       {{data}}
     </div>
+    <script src="{% static 'js/pgnator.js' %}"></script>
+    <script>
+      var data = "{{data.response.body.totalCount}}";
+      pgnator(data);
+    </script>
   </body>
 </html>

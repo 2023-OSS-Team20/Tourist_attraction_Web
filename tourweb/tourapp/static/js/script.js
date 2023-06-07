@@ -28,12 +28,3 @@ window.addEventListener("load", function () {
   var logo = this.document.getElementById("logo");
   logo.classList.add("logo_visible");
 });
-
-//pagenation
-
-let totalpage = Math.ceil(parseInt(data.response.body.numOfRows) / 12);
-
-const pgnbar = document.getElementsById(".btnlist");
-for (i = 1; i <= 2; i++) {
-  totalpage.innerHTML();
-}
