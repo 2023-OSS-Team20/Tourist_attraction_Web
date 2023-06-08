@@ -37,7 +37,7 @@ li {
 }
 
 .info {
-  height: 40vh;
+  height: 15vh;
 }
 .itemDiv {
   height: 140px;
@@ -89,6 +89,16 @@ img {
   margin: 0 auto;
 }
 
+.infowrapper > .dummy {
+  display: inline-block;
+  height: 15vh;
+}
+
+.infowrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .infoNumber {
   text-align: center;
 }
@@ -114,9 +124,25 @@ img {
   background-color: #fff;
 }
 
+.btnlist {
+  display: flex;
+  justify-content: center;
+}
+
 .pgbtn {
-  color: red;
-  background-color: greenyellow;
+  text-align: center;
+  font-size: 24px;
+  /*display*/
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   display: inline-block;
   cursor: pointer;
+}
+
+.pgbtn:hover {
+  transform: translateY(-2px);
 }

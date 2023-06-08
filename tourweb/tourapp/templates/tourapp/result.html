@@ -5,7 +5,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'css/result.css' %}?after"
+      href="{% static 'css/result.css' %}"
     />
   </head>
 
@@ -21,7 +21,10 @@
         </nav>
       </header>
       <div id="body">
-        <div class="info">{% include "tourapp/searchbar.html" %}</div>
+        <div class="infowrapper">
+          <div class="dummy"></div>
+          <div class="info">{% include "tourapp/searchbar.html" %}</div>
+        </div>
         <div class="infoNumber">
           검색 결과: {{data.response.body.totalCount}}개
         </div>
@@ -43,9 +46,6 @@
           {% endfor %}
         </div>
         <div class="buttons">
-          {%if data.response.body.pageNo == 1 %}
-          <div class="btnBack">{{data.response.body.pageNo}}</div>
-          {% endif %}
           <div class="btnlist" id="btnlist"></div>
         </div>
       </div>
@@ -53,8 +53,9 @@
     </div>
     <script src="{% static 'js/pgnator.js' %}"></script>
     <script>
-      var data = "{{data.response.body.totalCount}}";
-      pgnator(data);
+      var tc = "{{data.response.body.totalCount}}";
+      var pgn = "{{data.response.body.pageNo}}";
+      pgnator(tc, pgn);
     </script>
   </body>
 </html>
