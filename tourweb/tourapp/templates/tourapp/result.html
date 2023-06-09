@@ -30,9 +30,9 @@
         </div>
         <div class="listwrap">
           {% for item in data.response.body.items.item %}
-          <div class="itemDiv">
-            <form action="/result/?1111">
-              <input type="hidden" name="{{item.contId}}" />
+          <div class="itemDiv" onclick="goDetail()">
+            <form id="form" action="/pageChange/" method="get">
+              <input type="hidden" name="pnum" value="{{item.contentid}}" />
             </form>
             <div class="imgwrap">
               {% if item.firstimage %}
