@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('Keyword_result/', Keyword_result, name='result'),
+    path('Class_result/arg1/arg2/arg3',class_result, name='result'),
 ]
