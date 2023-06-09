@@ -23,8 +23,6 @@ def Keyword_result(request):
         keyword = request.GET.get('keyword')
     else:   #오류 처리를 위해
         keyword = None    
-    #link = KeywordLmaker(keyword)
-    #url = requests.get(link.Create())
             
     linkfac.setlink(KeywordLmaker(keyword))
     url = requests.get(linkfac.create())  
@@ -45,8 +43,6 @@ def class_result(request):
     else:   #오류 처리를 위해
         big, mid, small = None  
     
-    #link = ClassLmaker(big, mid, small)
-    #url = requests.get(link.Create())
     
     linkfac.setlink(ClassLmaker(big, mid, small))
     url = requests.get(linkfac.create())
@@ -58,6 +54,23 @@ def class_result(request):
         'data': data
     }
     return render(request, 'tourapp/result.html', context)
+
+def pageChange(request):
+    if request.method == 'GET':
+        page_num = request.GET.get('pnum')
+    else:   #오류 처리를 위해
+        page_num = 1    
+        
+    url = requests.get(linkfac.pNoChange(page_num))  
+    
+    text = url.text
+    data = json.loads(text)
+    
+    context = {
+        'data': data,
+    }
+    return render(request, 'tourapp/result.html', context)
+    
 
 def Id_result(request):
     if request.method == 'GET':
@@ -73,7 +86,7 @@ def Id_result(request):
     context = {
         'data': data
     }
-    return render(request, 'tourapp/result.html', context)
+    return render(request, 'tourapp/detail.html', context)
 
 
 def index(request):
