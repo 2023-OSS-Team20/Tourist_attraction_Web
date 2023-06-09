@@ -48,13 +48,13 @@ def class_result(request, big, mid, small):
     }
     return render(request, 'tourapp/result.html', context)
 
-def pageChange(request):
+def pageChangeView(request):
     if request.method == 'GET':
         page_num = request.GET.get('pnum')
     else:   #오류 처리를 위해
         page_num = 1    
-        
-    url = requests.get(linkfac.pNoChange(page_num))  
+    intpnum = int(page_num)
+    url = requests.get(linkfac.pNoChange(intpnum))  
     
     text = url.text
     data = json.loads(text)
