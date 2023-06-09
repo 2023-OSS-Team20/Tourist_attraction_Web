@@ -29,7 +29,6 @@ class KeywordLink(Link):
     
   def pageNo(self,num):
     self.pNo = urlencode({quote_plus('pageNo') : num})
-    self.searchURL = self.url + self.queryParams   + '&' + self.pNo + '&' +self.word
 
     
   def search(self,keyword):
@@ -50,11 +49,9 @@ class ClassLink(Link):
     })
     self.pNo = urlencode({quote_plus('pageNo') : 1})
     self.word = None
-    self.searchURL = None
 
   def pageNo(self,num):
     self.pNo = urlencode({quote_plus('pageNo') : num})
-    self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
 
   def search(self, big, mid, small):      #big, mid 분류코드 형식 ex) A01 A0101 A01010100
     self.word = urlencode({
@@ -62,7 +59,6 @@ class ClassLink(Link):
       quote_plus('cat2') : mid,
       quote_plus('cat3') : small
       })
-    self.searchURL = self.url + self.queryParams + '&' + self.pNo + '&' +self.word
     
 class IdLink(Link):
   def __init__(self):
@@ -73,7 +69,6 @@ class IdLink(Link):
       quote_plus('_type') : 'json'
     })
     self.word = None
-    self.searchURL = None
     
   def search(self,Id):
     self.word = urlencode({quote_plus('contId') : Id})
