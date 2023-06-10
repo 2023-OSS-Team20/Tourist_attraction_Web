@@ -36,6 +36,12 @@ def Keyword_result(request):
     return render(request, 'tourapp/result.html', context)
 
 def class_result(request, big, mid, small):   
+    if request.method == 'GET':
+        big = request.GET.get('big')
+        mid = request.GET.get('small')
+        small = request.GET.get('small')
+    else:   #오류 처리를 위해
+        big, mid, small = None 
     
     linkfac.setlink(ClassLmaker(big, mid, small))
     url = requests.get(linkfac.create())

@@ -8,7 +8,18 @@
       };
 
       function callAPI(arg1, arg2, agr3){
-        window.location.href = '/Class_result/${arg1}/${arg2}/${arg3}/';
+
+        var xhr = new XMLHttpRequest();
+        var url = "{% url 'Class_result/' %}?big=" + arg1 + "&mid=" + arg2 + "&small=" + arg3;
+        xhr.open("GET", url);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                // 응답 처리
+                console.log(response);
+            }
+        };
+        xhr.send();
       }
     </script>
     <link
