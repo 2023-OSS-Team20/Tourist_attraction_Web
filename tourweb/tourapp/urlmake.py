@@ -66,12 +66,15 @@ class IdLink(Link):
     self.queryParams = "serviceKey=" + Key + '&' + urlencode({
       quote_plus('MobileApp'): 'AppTest',
       quote_plus('MobileOS'): 'ETC',                              
-      quote_plus('_type') : 'json'
+      quote_plus('_type') : 'json',
     })
     self.word = None
     
   def search(self,Id):
-    self.word = urlencode({quote_plus('contId') : Id})
+    self.word = urlencode({quote_plus('contentId') : Id
+#quote_plus('firstImageYN') : 'Y',quote_plus('catcodeYN') : 'Y',quote_plus('addrinfoYN') : 'Y',quote_plus('mapinfoYN') : 'Y',quote_plus('overviewYN') : 'Y',quote_plus('defaultYN') : 'Y'
+    })
+
 
 #abstract factory
 class Linkmaker():
@@ -117,7 +120,6 @@ class IdLMaker(Linkmaker):
   def __init__(self, Id):
     self.Idlink = IdLink()
     self.Id = Id
-    
   def Create(self):
     self.Idlink.search(self.Id)
     return self.Idlink.url + self.Idlink.queryParams + '&' + self.Idlink.word
