@@ -35,7 +35,7 @@ def Keyword_result(request):
     }
     return render(request, 'tourapp/result.html', context)
 
-def Class_result(request, big, mid, small):   
+def Class_result(request, big = None, mid = None, small = None):   
     if request.method == 'GET':
         big = request.GET.get('big')
         mid = request.GET.get('small')
@@ -93,5 +93,3 @@ def Id_result(request):
 def index(request):
     return render(request, 'tourapp/index.html')
 
-# def result(request):
-#     return render(request, 'tourapp/result.html')

@@ -6,6 +6,14 @@
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
       };
+      {% comment %} function Class_send(big, mid, small) {
+        var xhr = new XMLHttpRequest();
+        var url = "/Class_result/";
+      
+        var params = "big=" + big + "&mid=" + mid + "&small=" + small;
+        xhr.open("GET", url + "?" + params);
+        xhr.send();
+      } {% endcomment %}
     </script>
     <link
       rel="stylesheet"
@@ -40,7 +48,7 @@
             <div>
               <div id="bcat1" class="bcat1">
                 🌳자연🌳
-                <div id="mcat" class="mcat">자연관광지</div>
+                <div id="mcat" class="mcat" onclick = "Class_send('A01', 'A0101', null)">자연관광지</div>
                 <div id="mcat" class="mcat">관광자원</div>
               </div>
             </div> </span
@@ -63,7 +71,7 @@
                  --><span id="span1" class="span1">
             <div>
               <div id="bcat1" class="bcat1">
-                🏌레저 스포츠🏌
+                🏌레포츠🏌
                 <div id="mcat" class="mcat">육상</div>
                 <div id="mcat" class="mcat">수상</div>
                 <div id="mcat" class="mcat">항공</div>
