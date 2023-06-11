@@ -67,13 +67,16 @@ class IdLink(Link):
       quote_plus('MobileApp'): 'AppTest',
       quote_plus('MobileOS'): 'ETC',                              
       quote_plus('_type') : 'json',
+      quote_plus('firstImageYN') : 'Y',
+      quote_plus('addrinfoYN') : 'Y',
+      quote_plus('mapinfoYN') : 'Y',
+      quote_plus('overviewYN') : 'Y',
+      quote_plus('defaultYN') : 'Y'
     })
     self.word = None
     
   def search(self,Id):
-    self.word = urlencode({quote_plus('contentId') : Id
-#quote_plus('firstImageYN') : 'Y',quote_plus('catcodeYN') : 'Y',quote_plus('addrinfoYN') : 'Y',quote_plus('mapinfoYN') : 'Y',quote_plus('overviewYN') : 'Y',quote_plus('defaultYN') : 'Y'
-    })
+    self.word = urlencode({quote_plus('contentId') : Id,})
 
 
 #abstract factory
@@ -124,7 +127,7 @@ class IdLMaker(Linkmaker):
     self.Idlink.search(self.Id)
     return self.Idlink.url + self.Idlink.queryParams + '&' + self.Idlink.word
 
-
+'''
 
 klink = KeywordLmaker("에버")
 
@@ -142,3 +145,7 @@ print(url)
 
 dlink = IdLMaker()
 
+ID = IdLMaker(126508)
+url = ID.Create()
+print(url)
+'''

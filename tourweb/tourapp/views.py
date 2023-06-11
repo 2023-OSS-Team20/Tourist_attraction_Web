@@ -59,6 +59,7 @@ def pageChange(request):
         page_num = request.GET.get('pnum')
     else:   #오류 처리를 위해
         page_num = 1    
+        
     intpnum = int(page_num)
     url = requests.get(linkfac.pNoChange(intpnum))  
     
@@ -77,7 +78,8 @@ def Id_result(request):
     else:   #오류 처리를 위해
         Id = None  
     
-    link = IdLMaker(Id)
+    intId = int(Id)
+    link = IdLMaker(intId)
     url = requests.get(link.Create())
     text = url.text
     data = json.loads(text)
