@@ -23,8 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('Keyword_result/', Keyword_result, name='result'),
-    path('Class_result/',Class_result, name='result'),
+    path('Class_result/<str:big>/<str:mid>/<str:small>/',Class_result, name='result'),
     path('Id_result/', Id_result, name="Id_result"),
     path('pageChange/', pageChange, name="pageChange"),
-]
-    
+]   
