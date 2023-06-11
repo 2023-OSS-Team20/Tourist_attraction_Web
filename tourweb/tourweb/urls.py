@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from tourapp.views import Keyword_result, index, class_result ,pageChange, Id_result
+from tourapp.views import Keyword_result, index, Class_result ,pageChange, Id_result
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('Keyword_result/', Keyword_result, name='result'),
-    path('Class_result/',class_result, name='result'),
+    path('Class_result/',Class_result, name='result'),
     path('Id_result/', Id_result, name="Id_result"),
+    path('pageChange/', pageChange, name="pageChange"),
 ]
+    
