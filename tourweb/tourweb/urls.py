@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('Keyword_result/', Keyword_result, name='result'),
-    path('pageChange/', pageChange, name="pageChange"),
+    path('Class_result/',class_result, name='result'),
     path('Id_result/', Id_result, name="Id_result"),
 ]
