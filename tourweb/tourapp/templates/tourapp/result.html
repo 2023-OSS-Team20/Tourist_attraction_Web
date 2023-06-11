@@ -31,7 +31,7 @@
         <div class="listwrap">
           {% for item in data.response.body.items.item %}
           <div class="itemDiv" onclick="goDetail()">
-            <form id="form" action="/pageChange/" method="get">
+            <form id="Idform" action="/Id_result/" method="get">
               <input type="hidden" name="pnum" value="{{item.contentid}}" />
             </form>
             <div class="imgwrap">

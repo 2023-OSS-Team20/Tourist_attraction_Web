@@ -54,7 +54,7 @@ def class_result(request, big, mid, small):
     }
     return render(request, 'tourapp/result.html', context)
 
-def pageChangeView(request):
+def pageChange(request):
     if request.method == 'GET':
         page_num = request.GET.get('pnum')
     else:   #오류 처리를 위해
