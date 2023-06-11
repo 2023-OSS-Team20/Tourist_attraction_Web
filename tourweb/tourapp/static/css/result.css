@@ -89,11 +89,6 @@ img {
   margin: 0 auto;
 }
 
-.infowrapper > .dummy {
-  display: inline-block;
-  height: 15vh;
-}
-
 .infowrapper {
   text-align: center;
   margin-top: 30px;
