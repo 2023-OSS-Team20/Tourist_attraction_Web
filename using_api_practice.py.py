@@ -27,13 +27,9 @@
             </section><!--section 2-->
             <br>
             <aside>
-                <a href="#"></a></br>
-                <a href="#"></a></br>
-                <a href="#" 1</a></br>
-                <a href="#"> 2</a>
+
             </aside>
-            <footer>
-            </footer>
+          
         </main>
     </div>
 </body>
