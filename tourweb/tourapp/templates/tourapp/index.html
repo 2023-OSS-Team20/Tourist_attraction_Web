@@ -6,21 +6,6 @@
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
       };
-
-      function callAPI(arg1, arg2, agr3){
-
-        var xhr = new XMLHttpRequest();
-        var url = "{% url 'Class_result/' %}?big=" + arg1 + "&mid=" + arg2 + "&small=" + arg3;
-        xhr.open("GET", url);
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                // 응답 처리
-                console.log(response);
-            }
-        };
-        xhr.send();
-      }
     </script>
     <link
       rel="stylesheet"
@@ -55,7 +40,7 @@
             <div>
               <div id="bcat1" class="bcat1">
                 🌳자연🌳
-                <div id="mcat" class="mcat" onclick = "callAPI('A01', 'A0101', '')">자연관광지</div>
+                <div id="mcat" class="mcat">자연관광지</div>
                 <div id="mcat" class="mcat">관광자원</div>
               </div>
             </div> </span
