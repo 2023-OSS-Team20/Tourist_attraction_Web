@@ -84,8 +84,8 @@ function pgnator(tc, pgn) {
 
 /* changepage 함수 부분 */
 
-function goDetail() {
-  var form = document.getElementById("Idform");
+function goDetail(i) {
+  var form = document.getElementById(i);
   form.submit();
 }
 

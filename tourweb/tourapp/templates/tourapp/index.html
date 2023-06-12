@@ -9,7 +9,7 @@
       {% comment %} function Class_send(big, mid, small) {
         var xhr = new XMLHttpRequest();
         var url = "/Class_result/";
-      
+
         var params = "big=" + big + "&mid=" + mid + "&small=" + small;
         xhr.open("GET", url + "?" + params);
         xhr.send();
@@ -48,7 +48,13 @@
             <div>
               <div id="bcat1" class="bcat1">
                 🌳자연🌳
-                <div id="mcat" class="mcat" onclick = "Class_send('A01', 'A0101', null)">자연관광지</div>
+                <div
+                  id="mcat"
+                  class="mcat"
+                  onclick="Class_send('A01', 'A0101', null)"
+                >
+                  자연관광지
+                </div>
                 <div id="mcat" class="mcat">관광자원</div>
               </div>
             </div> </span

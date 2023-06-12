@@ -1,1 +1,58 @@
-<div>{{data}}</div>
+<!DOCTYPE html>
+{% load static %}
+<meta http-equiv="Expires" content="-1" />
+<html lang="ko">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/style.css' %}?after"
+    />
+  </head>
+  <body>
+    <header class="Header">
+      <h1><a href="{% url 'index' %}">C&I</a></h1>
+      <nav>
+        <ul>
+          <li><a>About</a></li>
+          <li><a>Help</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+  {% for i in data.response.body.items.item %}
+  <div class="topcontentwrap">
+    <div class="imgwrap"><img src="{{i.firstimage}}" /></div>
+    <div>{{i.title}}</div>
+    <div class="infowrap">
+      <table class="infotable">
+        <tbody>
+          <tr>
+            <th>우편번호</th>
+            <td>{{i.zipcode}}</td>
+          </tr>
+          <tr>
+            <th>전화명</th>
+            <td>{{i.telname}}</td>
+          </tr>
+          <tr>
+            <th>전화번호</th>
+            <td>{{i.tel}}</td>
+          </tr>
+          <tr>
+            <th>홈페이지</th>
+            <td><div>{{i.homepage|safe}}</div></td>
+          </tr>
+          <tr>
+            <th>주소</th>
+            <td>{{i.addr1}} {{i.addr2}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="overviewWrap">
+      <div>{{i.overview|safe}}</div>
+    </div>
+  </div>
+  {% endfor %}
+</html>

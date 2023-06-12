@@ -78,6 +78,7 @@ def Id_result(request):
     else:   #오류 처리를 위해
         Id = None  
     
+    intid = 0
     intId = int(Id)
     link = IdLMaker(intId)
     url = requests.get(link.Create())

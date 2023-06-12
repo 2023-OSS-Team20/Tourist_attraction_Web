@@ -29,8 +29,8 @@
         </div>
         <div class="listwrap">
           {% for item in data.response.body.items.item %}
-          <div class="itemDiv" onclick="goDetail()">
-            <form id="Idform" action="/Id_result/" method="get">
+          <div class="itemDiv" onclick="goDetail('{{item.contentid}}')">
+            <form id="{{item.contentid}}" action="/Id_result/" method="get">
               <input
                 type="hidden"
                 name="contentsId"
@@ -52,7 +52,6 @@
           <div class="btnlist" id="btnlist"></div>
         </div>
       </div>
-      {{data}}
     </div>
     <script src="{% static 'js/pgnator.js' %}"></script>
     <script>
