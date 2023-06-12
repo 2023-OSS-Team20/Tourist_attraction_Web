@@ -35,11 +35,11 @@ def Keyword_result(request):
     }
     return render(request, 'tourapp/result.html', context)
 
-def Class_result(request, big = None, mid = None, small = None):   
+def Class_result(request):   
     if request.method == 'GET':
-        big = request.GET.get('big')
-        mid = request.GET.get('small')
-        small = request.GET.get('small')
+        big = request.GET.get('big',None)
+        mid = request.GET.get('small',None)
+        small = request.GET.get('small',None)
     else:   #오류 처리를 위해
         big, mid, small = None 
     
