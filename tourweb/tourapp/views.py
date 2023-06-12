@@ -38,13 +38,15 @@ def Keyword_result(request):
 def Class_result(request):   
     if request.method == 'GET':
         big = request.GET.get('big',None)
-        mid = request.GET.get('small',None)
+        mid = request.GET.get('mid',None)
         small = request.GET.get('small',None)
     else:   #오류 처리를 위해
         big, mid, small = None 
     
     linkfac.setlink(ClassLmaker(big, mid, small))
     url = requests.get(linkfac.create())
+    
+    print(url)
     
     text = url.text
     data = json.loads(text)
