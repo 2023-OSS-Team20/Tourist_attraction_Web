@@ -45,9 +45,7 @@ def Class_result(request):
     
     linkfac.setlink(ClassLmaker(big, mid, small))
     url = requests.get(linkfac.create())
-    
-    print(url)
-    
+     
     text = url.text
     data = json.loads(text)
     
