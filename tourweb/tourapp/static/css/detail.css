@@ -62,4 +62,23 @@ li {
 }
 img {
   width: 400px;
+  padding: 30px
+}
+.infowrap{
+  position: relative;
+}
+
+.infotable{
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  right: 60px;
+  bottom: 110px;
+  border-collapse: collapse;
+}
+th{
+  border-style : solid;
+}
+td{
+  border-style : solid;
 }
