@@ -25,7 +25,7 @@
   {% for i in data.response.body.items.item %}
   <div class="topcontentwrap">
     <div class="imgwrap">
-      {% if item.firstimage %}
+      {% if i.firstimage %}
       <img src="{{i.firstimage}}" />
     </div>
     {% else %}
@@ -63,4 +63,5 @@
     </div>
   </div>
   {% endfor %}
+  <button onclick="history.back()">목록으로</button>
 </html>
