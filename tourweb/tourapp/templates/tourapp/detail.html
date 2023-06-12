@@ -8,6 +8,7 @@
       type="text/css"
       href="{% static '/css/style.css' %}?after"
     />
+    <!-- 페이지 최상단 헤더 -->
   </head>
   <body>
     <header class="Header">
@@ -20,9 +21,16 @@
       </nav>
     </header>
   </body>
+  <!-- 데이터가 하나지만 배열 형태라 for문을 통하여 접근할 수 밖에 없었습니다 -->
   {% for i in data.response.body.items.item %}
   <div class="topcontentwrap">
-    <div class="imgwrap"><img src="{{i.firstimage}}" /></div>
+    <div class="imgwrap">
+      {% if item.firstimage %}
+      <img src="{{i.firstimage}}" />
+    </div>
+    {% else %}
+    <img src="{% static '/image/noimg.jpg' %}" />
+    {% endif %}
     <div>{{i.title}}</div>
     <div class="infowrap">
       <table class="infotable">
