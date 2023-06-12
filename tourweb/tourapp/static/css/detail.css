@@ -1,0 +1,31 @@
+header {
+  height: 50px;
+  position: relative;
+  top: 0;
+  opacity: 0.8;
+  backdrop-filter: blur(30px);
+  background-color: blue;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+header > a {
+  color: wheat;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-left: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
