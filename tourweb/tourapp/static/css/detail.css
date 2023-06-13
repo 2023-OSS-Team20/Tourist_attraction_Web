@@ -29,51 +29,23 @@ li {
   font-size: 18px;
   font-weight: bold;
 }
-header {
-  height: 50px;
+.topcontentwrap {
   position: relative;
-  top: 0;
-  opacity: 0.8;
-  backdrop-filter: blur(30px);
-  background-color: blue;
-  padding-left: 32px;
-  padding-right: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
 }
-header > a {
-  color: wheat;
+.titlewrap{
+  font-size:20px;
 }
-a {
-  text-decoration: none;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin-left: 16px;
-  font-size: 18px;
-  font-weight: bold;
-}
-img {
-  width: 400px;
+img{
   padding: 30px
+  display: inline-block;
+  width: 400px;
 }
 .infowrap{
-  position: relative;
 }
 
-.infotable{
+.infotable{  
   width: 400px;
   height: 200px;
-  position: absolute;
-  right: 60px;
-  bottom: 110px;
   border-collapse: collapse;
 }
 th{
@@ -81,4 +53,10 @@ th{
 }
 td{
   border-style : solid;
+}
+.overviewWrap{
+  position: absolute;
+  top: 0px;
+  display: inline-block;
+  float: right;
 }
