@@ -68,6 +68,11 @@ td{
   border-bottom: 1px solid #ccc;
 }
 .overviewWrap{
+  margin: 2em 1em;
+  padding: 1em 2em;
+  background-color:#fffdfd;
+  box-shadow: 0 0 6px 1px #136fdd, 0 0 6px 1px #faccbc inset;
+  border-radius: 30px;
   position: absolute;
   top: 0px;
   display: inline-block;
