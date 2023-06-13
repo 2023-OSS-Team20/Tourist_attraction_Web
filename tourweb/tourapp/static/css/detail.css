@@ -31,9 +31,11 @@ li {
 }
 .topcontentwrap {
   position: relative;
+  font-weight: bold;
 }
 .titlewrap{
   font-size:20px;
+  font-weight: bold;
 }
 img{
   padding: 30px
@@ -54,7 +56,6 @@ img{
 th{
   width: 147px;
   padding: 10px;
-  font-weight: bold;
   vertical-align: top;
   color: #153d73;
   border-right: 1px solid #ccc;
@@ -78,3 +79,4 @@ td{
   display: inline-block;
   float: right;
 }
+
