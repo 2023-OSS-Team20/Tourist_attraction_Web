@@ -33,47 +33,45 @@ li {
   position: relative;
   font-weight: bold;
 }
-.titlewrap{
-  font-size:20px;
+.titlewrap {
+  font-size: 20px;
   font-weight: bold;
 }
-img{
-  padding: 30px
-  display: inline-block;
+img {
+  float: left;
+  padding: 30px;
   width: 500px;
 }
-.infowrap{
+.infowrap {
+  display: inline-block;
 }
 
-.infotable{  
+.infotable {
   border-collapse: collapse;
   text-align: left;
   line-height: 1.5;
   border-top: 1px solid #ccc;
   border-left: 3px solid #369;
-  margin : 20px 10px;
+  margin: 20px 10px;
 }
-th{
+th {
   width: 100px;
   vertical-align: top;
   color: #153d73;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-td{
+td {
   width: 300px;
   vertical-align: top;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-.overviewWrap{
+.overviewWrap {
   margin: 2em 1em;
   padding: 1em 2em;
-  background-color:#fffdfd;
+  background-color: #fffdfd;
   box-shadow: 0 0 6px 1px #136fdd, 0 0 6px 1px rgb(255, 255, 255) inset;
   border-radius: 30px;
   display: inline-block;
 }
-
-
-
