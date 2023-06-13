@@ -40,7 +40,7 @@ li {
 img{
   padding: 30px
   display: inline-block;
-  width: 400px;
+  width: 500px;
 }
 .infowrap{
 }
@@ -54,16 +54,14 @@ img{
   margin : 20px 10px;
 }
 th{
-  width: 147px;
-  padding: 10px;
+  width: 100px;
   vertical-align: top;
   color: #153d73;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 td{
-  width: 349px;
-  padding: 10px;
+  width: 300px;
   vertical-align: top;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -74,9 +72,6 @@ td{
   background-color:#fffdfd;
   box-shadow: 0 0 6px 1px #136fdd, 0 0 6px 1px #faccbc inset;
   border-radius: 30px;
-  position: absolute;
-  top: 0px;
   display: inline-block;
-  float: right;
 }
 
