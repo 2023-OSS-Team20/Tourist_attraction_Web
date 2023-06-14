@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  padding: 0;
+}
+
 header {
   height: 50px;
   position: relative;
@@ -50,10 +54,11 @@ li {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  background-color: white;
 }
 
 .itemDiv:hover {
-  box-shadow: 1px 1px 3px 1px skyblue;
+  box-shadow: 2px 2px 3px 1px white;
 }
 
 .itemDiv:hover > .listTitle {
@@ -102,10 +107,15 @@ img {
   margin-top: 5vh;
 }
 
+.bodywrap {
+  background-image: url("../image/resultbg.png");
+}
+
 .body {
   background-image: url("../image/bg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 0;
 }
 
 .btnBack {
