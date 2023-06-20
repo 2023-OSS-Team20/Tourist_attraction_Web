@@ -25,12 +25,7 @@ header {
   align-items: center;
   color: black;
 }
-header > a {
-  color: wheat;
-}
-a {
-  text-decoration: none;
-}
+
 ul {
   list-style-type: none;
   padding: 0;

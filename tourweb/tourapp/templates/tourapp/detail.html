@@ -27,12 +27,12 @@
     <div class="imgwrap">
       {% if i.firstimage %}
       <img src="{{i.firstimage}}" />
+      {% else %}
+      <img src="{% static '/image/noimg.jpg' %}" />
+      {% endif %}
     </div>
-    {% else %}
-    <img src="{% static '/image/noimg.jpg' %}" />
-    {% endif %}
-    <div>{{i.title}}</div>
     <div class="infowrap">
+      <div class="titlewrap">{{i.title}}</div>
       <table class="infotable">
         <tbody>
           <tr>
