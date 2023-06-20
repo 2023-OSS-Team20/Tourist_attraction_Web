@@ -80,9 +80,11 @@ class IdLink(Link):
 
 #abstract factory
 class Linkmaker():
-  def __init__():
+  def __init__(self):
     pass
-  def Create():
+  def Create(self):
+    pass
+  def pageChange(self,number):
     pass
     
 class KeywordLmaker(Linkmaker):
@@ -120,9 +122,13 @@ class IdLMaker(Linkmaker):
   def __init__(self, Id):
     self.Idlink = IdLink()
     self.Id = Id
+    
   def Create(self):
     self.Idlink.search(self.Id)
     return self.Idlink.url + self.Idlink.queryParams + '&' + self.Idlink.word
+  
+  def pageChange(): #사용하지 x
+    pass
 
 '''
 
